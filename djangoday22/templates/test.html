@@ -1,0 +1,17 @@
+{% load cache %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <p>{{ v }}</p>
+
+        <p>{{ v }}</p>
+    {% cache 5 c1 %}
+         <p>{{ v }}</p>
+    {% endcache %}
+
+</body>
+</html>
